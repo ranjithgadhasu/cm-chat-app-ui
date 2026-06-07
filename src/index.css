@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer components {
+  .app-page {
+    @apply bg-white text-black dark:bg-[#0b141a] dark:text-white;
+  }
+
+  .app-card {
+    @apply bg-white dark:bg-[#202c33];
+  }
+
+  .app-border {
+    @apply border-gray-200 dark:border-gray-700;
+  }
+
+  .app-text-secondary {
+    @apply text-gray-500 dark:text-gray-400;
+  }
+}
