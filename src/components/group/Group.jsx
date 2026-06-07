@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import Sidebar from "../Sidebar/Sidebar";
+import Sidebar from "../sidebar/Sidebar";
 import {
   Search,
   Plus,
