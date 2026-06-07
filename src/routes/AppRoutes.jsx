@@ -5,7 +5,7 @@ import SidebarCall from "../components/calllog/SidebarCall";
 import Group from "../components/group/Group";
 import UpdatesPage from "../components/updates/UpdatesPage";
 import ArchivePage from "../components/updates/ArchivePage";
-import UnreadPage from "../components/updates/UnReadPage";
+import UnreadPage from "../components/updates/UnreadPage";
 import Settings from "../components/settings/Settings";
 import Notification from "../components/settings/NotificationSettings";
 import Privacy from "../components/settings/Privacy";
@@ -26,7 +26,6 @@ function AppRoutes() {
         <Route path="/" element={<ProfileCard />} />
         <Route path="/chat" element={<ChatDashboard />} />
         <Route path="/profile" element={<ProfileCard />} />
-        {/*<Route path="/login" element={<Login />} />*/}
         <Route path="/calllog" element={<SidebarCall />} />
         <Route path="/group" element={<Group />} />
         <Route path="/updates" element={<UpdatesPage />} />
