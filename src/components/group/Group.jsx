@@ -586,7 +586,7 @@ export default function Groups() {
 
                   <span className="text-sm text-gray-700 dark:text-black">Chip</span>
 
-                  <button className="w-4 h-4 rounded-full bg-gray-300 text-[10px] flex items-center justify-center">
+                  <button className="w-4 h-4 rounded-full bg-gray-300 text-[10px] flex items-center justify-center dark:text-black">
                     ✕
                   </button>
                 </div>
@@ -601,7 +601,7 @@ export default function Groups() {
 
                   <span className="text-sm text-gray-700 dark:text-black">Chip</span>
 
-                  <button className="w-4 h-4 rounded-full bg-gray-300 text-[10px] flex items-center justify-center">
+                  <button className="w-4 h-4 rounded-full bg-gray-300 text-[10px] flex items-center justify-center dark:text-black">
                     ✕
                   </button>
                 </div>

@@ -11,7 +11,6 @@ import {
 import Sidebar from "../sidebar/Sidebar";
 import { Link } from "react-router-dom";
 
-
 const updatesData = {
   notSeen: [
     {
@@ -55,32 +54,38 @@ const updatesData = {
 
 export default function UpdatesPage() {
   const [selectedUpdate, setSelectedUpdate] = useState(null);
-  
 
   return (
-    <div className="app-page min-h-screen w-full h-screen bg-[#f5f5f5] flex overflow-scroll">
+    <div className="app-page min-h-screen w-full h-screen bg-[#f5f5f5] flex">
       {/* Sidebar */}
       <Sidebar />
-                    
+
       {/* Updates Panel */}
-      <div className="w-[320px] bg-[#efefef] border-r border-gray-300 px-5 py-4 overflow-y-auto">
+      <div className="w-[320px] bg-[#efefef] border-r  dark:bg-[#0b141a] border-gray-300 px-5 py-4 overflow-y-auto">
         {/* Header */}
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center gap-3">
-           <Link to="/chat"> <ChevronLeft size={22} /></Link>
-            <h1 className="text-[34px] font-semibold">Updates</h1>
+            <Link to="/chat">
+              {" "}
+              <ChevronLeft size={22} />
+            </Link>
+            <h1 className="text-[34px] font-semibold dark:text-white">
+              Updates
+            </h1>
           </div>
 
-          <button   onClick={() =>
-    document.getElementById("storyUpload").click()
-  }>
-            <Plus size={24} className="cursor-pointer"/>
+          <button
+            onClick={() => document.getElementById("storyUpload").click()}
+          >
+            <Plus size={24} className="cursor-pointer" />
           </button>
         </div>
 
         {/* Not Seen */}
         <div>
-          <p className="text-[13px] text-gray-500 mb-4">Not seen</p>
+          <p className="text-[13px] text-gray-500 mb-4 dark:text-white">
+            Not seen
+          </p>
 
           <div className="flex flex-col gap-3">
             {updatesData.notSeen.map((item) => (
@@ -91,7 +96,7 @@ export default function UpdatesPage() {
                 ${
                   selectedUpdate?.id === item.id
                     ? "bg-[#5d95ff] text-white"
-                    : "bg-[#f5f5f5]"
+                    : "bg-[#f5f5f5] dark:text-black"
                 }`}
               >
                 <div className="flex items-center gap-3">
@@ -120,7 +125,7 @@ export default function UpdatesPage() {
 
         {/* Seen */}
         <div className="mt-10">
-          <p className="text-[13px] text-gray-500 mb-4">Seen</p>
+          <p className="text-[13px] text-gray-500 mb-4 dark:text-white">Seen</p>
 
           <div className="flex flex-col gap-3">
             {updatesData.seen.map((item) => (
@@ -131,7 +136,7 @@ export default function UpdatesPage() {
                 ${
                   selectedUpdate?.id === item.id
                     ? "bg-[#5d95ff] text-white"
-                    : "bg-[#f5f5f5]"
+                    : "bg-[#f5f5f5] dark:text-black"
                 }`}
               >
                 <div className="flex items-center gap-3">
@@ -164,13 +169,15 @@ export default function UpdatesPage() {
       </div>
 
       {/* Preview */}
-      <div className="flex-1 bg-[#f7f7f7] flex flex-col">
+      <div className="flex-1 bg-[#f7f7f7] flex flex-col  dark:bg-[#0b141a] ">
         {!selectedUpdate ? (
           <div className="flex-1 flex items-center justify-center">
             <div className="flex items-center gap-4 text-gray-700">
-              <CircleDashed size={26} className="text-gray-500" />
+              <CircleDashed size={26} className="text-gray-500  dark:text-white" />
 
-              <p className="text-sm font-medium">Click on an update to view</p>
+              <p className="text-sm font-medium dark:text-white">
+                Click on an update to view
+              </p>
             </div>
           </div>
         ) : (
@@ -193,10 +200,10 @@ export default function UpdatesPage() {
             </div>
 
             {/* Story Area */}
-            <div className="flex-1 flex items-center justify-center relative px-10">
+            <div className="flex-1 flex items-center justify-center relative px-10  dark:bg-[#0b141a]">
               {/* Left Arrow */}
               <button className="absolute left-12 text-gray-500">
-                <ChevronLeft size={32} />
+                <ChevronLeft size={32} className="dark:text-white" />
               </button>
 
               {/* Story Card */}
@@ -217,13 +224,13 @@ export default function UpdatesPage() {
               </div>
 
               {/* Right Arrow */}
-              <button className="absolute right-12 text-gray-500">
+              <button className="absolute right-12 text-gray-500 dark:text-white">
                 <ChevronRight size={32} />
               </button>
             </div>
 
             {/* Bottom */}
-            <div className="h-[90px] border-t border-gray-200 px-8 flex items-center justify-between bg-[#eef3ff]">
+            <div className="h-[90px] border-t border-gray-200  dark:border-gray-700 px-8 flex items-center justify-between bg-[#eef3ff]  dark:bg-[#0b141a]">
               {/* Left Section */}
               <div className="flex items-center ml-90 gap-4">
                 <input type="file" id="storyUpload" className="hidden" />

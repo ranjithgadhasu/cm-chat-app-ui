@@ -20,7 +20,7 @@ function Security() {
       <Sidebar />
 
       {/* Left Panel */}
-      <div className="w-[320px] bg-[#f8f9fc] border-r border-gray-200 dark:bg-[#0b141a]">
+      <div className="w-[320px] bg-[#f8f9fc] border-r border-gray-200 dark:border-gray-700  dark:bg-[#0b141a]">
         {/* Header */}
         <div className="h-[60px] px-5 flex items-center gap-4">
           <IoArrowBack

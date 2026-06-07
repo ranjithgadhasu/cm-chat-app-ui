@@ -134,12 +134,12 @@ function BlockedContacts() {
       </div>
       {showBlockModal && (
         <div className="fixed inset-0 bg-black/30 flex items-center justify-center z-50">
-          <div className="w-[420px] bg-white rounded-3xl shadow-xl p-6">
+          <div className="w-[420px] bg-white rounded-3xl shadow-xl p-6  dark:bg-[#0b141a]">
             {/* Header */}
-            <div className="flex items-center gap-5 pb-4 border-b">
+            <div className="flex items-center gap-5 pb-4 border-b dark:border-gray-700">
               <button
                 onClick={() => setShowBlockModal(false)}
-                className="text-gray-500"
+                className="text-gray-500 dark:text-white"
               >
                 ✕
               </button>
@@ -154,33 +154,35 @@ function BlockedContacts() {
                 placeholder="Search"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full h-11 px-4 rounded-xl bg-[#EEF4FF] outline-none text-sm"
+                className="w-full h-11 px-4 rounded-xl bg-[#EEF4FF] outline-none text-sm dark:bg-[#2a3942]"
               />
             </div>
 
-            {/* Contact List */}
-            <div className="mt-6 max-h-[350px] overflow-y-auto">
-              {filteredContacts.map((contact) => (
-                <div
-                  key={contact.id}
-                  className="flex items-center gap-4 py-3 cursor-pointer hover:bg-gray-50 rounded-lg px-2"
-                >
-                  <img
-                    src={contact.avatar}
-                    alt=""
-                    className="w-11 h-11 rounded-full"
-                  />
+         {/* Contact List */}
+<div className="mt-6 max-h-[350px] overflow-y-auto">
+  {filteredContacts.map((contact) => (
+    <div
+      key={contact.id}
+      className="group flex items-center gap-4 py-3 cursor-pointer hover:bg-white rounded-lg px-2"
+    >
+      <img
+        src={contact.avatar}
+        alt=""
+        className="w-11 h-11 rounded-full"
+      />
 
-                  <div>
-                    <h4 className="font-semibold text-[15px]">
-                      {contact.name}
-                    </h4>
+      <div>
+        <h4 className="font-semibold text-[15px] dark:text-white group-hover:text-black">
+          {contact.name}
+        </h4>
 
-                    <p className="text-xs text-gray-500">{contact.status}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+        <p className="text-xs text-gray-500 dark:text-white group-hover:text-black">
+          {contact.status}
+        </p>
+      </div>
+    </div>
+  ))}
+</div>
           </div>
         </div>
       )}
