@@ -61,7 +61,7 @@ export default function UpdatesPage() {
       <Sidebar />
 
       {/* Updates Panel */}
-      <div className="w-[320px] bg-[#efefef] border-r  dark:bg-[#0b141a] border-gray-300 px-5 py-4 overflow-y-auto">
+      <div className="w-[320px] bg-[#efefef] border-r dark:border-gray-700  dark:bg-[#0b141a] border-gray-300 px-5 py-4 overflow-y-auto">
         {/* Header */}
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center gap-3">
@@ -183,7 +183,7 @@ export default function UpdatesPage() {
         ) : (
           <>
             {/* Top */}
-            <div className="h-[70px] border-b border-gray-200 flex items-center justify-between px-12">
+            <div className="h-[70px] border-b border-gray-200 dark:border-gray-700 flex items-center justify-between px-12">
               <h2 className="font-semibold text-[15px]">
                 {selectedUpdate.name}
               </h2>
