@@ -21,7 +21,7 @@ function ProfileCard() {
     
       <Sidebar/>
       {/* Profile Section */}
-      <div className="app-page min-h-screen w-[320px] bg-[#f7f8fc] border-gray-300 border-r px-6 py-6 overflow-auto dark:bg-[#0b141a]">
+      <div className="app-page min-h-screen w-[320px] dark:border-gray-700 bg-[#f7f8fc] border-gray-300 border-r px-6 py-6 overflow-auto dark:bg-[#0b141a]">
         {/* Header */}
         <div className="flex items-center gap-3 mb-10">
           <IoArrowBack className="text-2xl text-gray-600 cursor-pointer dark:text-white" />
